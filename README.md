@@ -14,7 +14,7 @@ ln -s ~/.dotfiles/.vimrc ~/.vimrc
 Symlink for neovim configuration directory
 
 ```
-ln -s ~/.dotfiles/.config/nvim/ ~/.config/nvim
+ln -s ~/.dotfiles/.config/nvim ~/.config/nvim
 
 ```
 
