@@ -45,6 +45,7 @@ return {
 				"vim", -- use vim with vimdoc
 				"vimdoc", -- use vimdoc with vim
 				"yaml",
+				"zig", -- zig parser Tresitter
 			},
 		})
 	end,

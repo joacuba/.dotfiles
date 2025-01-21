@@ -34,6 +34,7 @@ return {
 				"pyright", -- python server
 				"tailwindcss", -- tailwind server
 				"rust_analyzer", -- rust LSP
+				"zls", -- zig lsp
 			},
 		})
 
