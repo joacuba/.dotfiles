@@ -25,6 +25,7 @@ return {
 				"clangd", -- c++ server
 				"cmake", -- cmake
 				"cssls", -- css server
+				"cssmodules_ls", -- LSP for autocompletion and go to definition functionality for CSS modules
 				"gopls", -- go server
 				"graphql",
 				"html", -- html server
