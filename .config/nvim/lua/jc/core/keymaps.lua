@@ -16,3 +16,7 @@ vim.keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Tab close" })
 vim.keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Tab next" })
 vim.keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "tab prev" })
 vim.keymap.set("n", "<leader>tb", "<cmd>tabnew %<CR>", { desc = "Open current buffer in a new tab" })
+
+-- paste and delete in void registers
+vim.keymap.set("x", "<leader>p", '"_dP', { desc = "Delete to void register and Paste" })
+vim.keymap.set({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete to void register" })
