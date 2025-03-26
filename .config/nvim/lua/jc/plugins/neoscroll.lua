@@ -1,5 +1,5 @@
 -- smoth scrolling in neovim buffer
 return {
 	"karb94/neoscroll.nvim",
-	opts = {},
+	opts = { duration_multiplier = 0.5 },
 }
