@@ -31,13 +31,9 @@ return {
 		})
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-		-- atomatic setup provided by mason-lspconfig, see `:h mason-lspconfig-automatic-server-setup`
-		require("mason-lspconfig").setup_handlers({
-			function(server_name)
-				require("lspconfig")[server_name].setup({
-					capabilities = capabilities,
-				})
-			end,
+		-- setup cmp nvim capabilities for all servers, see :help lspconfig-new
+		vim.lsp.config("*", {
+			capabilities = capabilities,
 		})
 	end,
 }
