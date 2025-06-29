@@ -10,7 +10,7 @@ return {
 			javascriptreact = { "eslint_d" },
 			typescriptreact = { "eslint_d" },
 			astro = { "eslint_d" },
-			python = { "pylint" },
+			python = { "ruff" },
 			cpp = { "clangtidy" }, -- not available in Mason, install llvm for use clang-tidy
 			h = { "clangtidy" }, -- not available in Mason, install llvm for use clang-tidy
 			go = { "golangcilint" },

@@ -50,7 +50,7 @@ return {
 				"clang-format", -- C/C++ formatter
 				-- linters
 				"eslint_d",
-				"pylint",
+				"ruff", -- python rust base linter, before i was using pylint but i have venv problems
 				"golangci-lint",
 			},
 		})
