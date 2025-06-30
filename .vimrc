@@ -43,6 +43,12 @@ set smartcase       " Override ignorecase if pattern contains uppercase
 " Remap jk to Esc in Insert mode
 inoremap jk <Esc>
 
+" Set leader key
+let mapleader = " "
+
+" Remap leader ff to :Explorer
+nnoremap <Leader>ff :Ex<CR>
+
 " Plug automatic installation
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
@@ -56,12 +62,25 @@ call plug#begin()
 " List your plugins here
 
 Plug 'bluz71/vim-moonfly-colors', { 'as': 'moonfly' }
+Plug 'jiangmiao/auto-pairs'
+
+" Cpp highlighting
+Plug 'octol/vim-cpp-enhanced-highlight'
 
 call plug#end()
 
 " colorsheme initialization file
 colorscheme moonfly
 let g:moonflyTransparent = v:true
+
+
+" Enable extra C++ syntax highlighting from plugin
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1
+let g:cpp_experimental_simple_template_highlight = 1
+let g:cpp_experimental_template_highlight = 1
+let g:cpp_concepts_highlight = 1
 
 " Ensure transparency settings are applied
 hi Normal guibg=NONE ctermbg=NONE
