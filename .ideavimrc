@@ -1,0 +1,15 @@
+" Set relative line numbers
+set relativenumber
+
+" Remap jk to Esc in Insert mode
+inoremap jk <Esc>
+
+" Use system clipboard, linux and MacOS compatibility
+set clipboard^=unnamed,unnamedplus
+
+" Enable search highlighting and incremental search
+set hlsearch
+set incsearch
+
+set ignorecase      " Ignore case in searches by default
+set smartcase       " Override ignorecase if pattern contains uppercase

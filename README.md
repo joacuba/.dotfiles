@@ -1,40 +1,28 @@
 # .Dotfiles with Symlinks
 
+clone this repo in your $HOME dir and then execute the below scripts depending of the OS
+
+> ⚠️ **Warning:** This is a personal repo so the scripts are for my use!
+
 ## Unix like systems
 
-Symlinks syntax: `ln -s <target> <link-name>`
-
-Symlink for .vimrc, vim configuration file
+Run
 
 ```
-ln -s ~/.dotfiles/.vimrc ~/.vimrc
-
+./create-symlinks.sh
 ```
 
-Symlink for neovim configuration directory
+for create symlinks
+
+## MacOS
+
+Run
 
 ```
-ln -s ~/.dotfiles/.config/nvim ~/.config/nvim
-
+./create-symlinks.zsh
 ```
 
-Symlink for alacritty configuration directory
+for see the options
 
-```
-ln -s ~/.dotfiles/.config/alacritty ~/.config/alacritty
-
-```
-
-Symlink for ghostty configuration directory
-
-```
-ln -s ~/.dotfiles/.config/ghostty ~/.config/ghostty
-
-```
-
-Symlink for tmux configuration file
-
-```
-ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
-
-```
+> 💡 **Note:**  
+> Currently ./create-symlinks.sh and ./create-symlinks.zsh have different implementation.
