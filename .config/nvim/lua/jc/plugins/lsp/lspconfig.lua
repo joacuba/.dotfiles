@@ -27,6 +27,8 @@ return {
 				map("<leader>ca", vim.lsp.buf.code_action, "Code Action")
 
 				map("K", vim.lsp.buf.hover, "Hover Documentation")
+
+				map("<leader>rs", ":LspRestart<CR>", "Restart LSP")
 			end,
 		})
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
