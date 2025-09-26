@@ -8,6 +8,7 @@ return {
 			build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release",
 		},
 		"nvim-tree/nvim-web-devicons",
+		"folke/todo-comments.nvim",
 	},
 	config = function()
 		local actions = require("telescope.actions")
@@ -33,5 +34,8 @@ return {
 		vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Find help" })
 		vim.keymap.set("n", "<leader>fw", builtin.grep_string, { desc = "Find current Word under the cursor" })
 		vim.keymap.set("n", "<leader>fd", builtin.diagnostics, { desc = "Find Diagnostics" })
+		vim.keymap.set("n", "<leader>ft", function()
+			vim.cmd("TodoTelescope")
+		end, { desc = "Enable Copilot" })
 	end,
 }
