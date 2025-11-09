@@ -18,6 +18,7 @@ return {
 			--},
 			-- ensure these language parser are installed
 			ensure_installed = {
+				"angular",
 				"astro", -- Treesitter grammar for Astro web wramework
 				"bash",
 				"cmake",
@@ -44,6 +45,7 @@ return {
 				"typescript",
 				"vim", -- use vim with vimdoc
 				"vimdoc", -- use vimdoc with vim
+				"vue",
 				"yaml",
 				"zig", -- zig parser Tresitter
 			},

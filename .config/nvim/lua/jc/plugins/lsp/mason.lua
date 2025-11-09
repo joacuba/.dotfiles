@@ -4,7 +4,7 @@ return {
 		ensure_installed = {
 			"astro", -- astro framework
 			"angularls", --angular lsp
-			"vuels", --vue lsp
+			"vue_ls", --vue lsp
 			"clangd", -- c++ server
 			"cmake", -- cmake
 			"cssls", -- css server
