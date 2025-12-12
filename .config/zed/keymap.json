@@ -1,0 +1,75 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "j k": "vim::NormalBefore"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal || Terminal || ProjectPanel || AgentPanel || GitPanel",
+    "bindings": {
+      // "space e e": It's part of a short cut i'm already used to in neovim for explore the files
+      "space e e": "workspace::ToggleLeftDock",
+
+      // "space f p": Alias for focus project, this will change the focus between the editor and the Project Panel
+      // if we have other panel that is not the Project panel open in the left dock this binding will focus the
+      // left dock in the project panel
+      "space f p": "project_panel::ToggleFocus",
+
+      // "space f g": Alias for find using grep in the project
+      "space f g": "pane::DeploySearch",
+
+      // "space f r": Alias for find and replace
+      "space f r": ["pane::DeploySearch", { "replace_enabled": true }],
+
+      // "space f f": Alias for file finder
+      "space f f": "file_finder::Toggle",
+
+      // "space t t": Alias for toggle terminal
+      "space t t": "terminal_panel::Toggle",
+
+      // "space t a": Alias for toggle agent pane
+      "space t a": "workspace::ToggleRightDock",
+      "space t g": "git_panel::ToggleFocus",
+
+      //
+      // use Ctrl-w + h, j, k, or l in vim mode for mode bewtwen split panes and even the Docks
+      //
+
+      "space s v": "pane::SplitVertical",
+      "space s h": "pane::SplitHorizontal",
+      "space x x": "editor::ToggleDiagnostics"
+    }
+  },
+  {
+    "context": "Dock",
+    "bindings": {
+      // Alias for focues editor
+      "space f e": "editor::ToggleFocus"
+    }
+  },
+  {
+    // Bindings for the git panel
+    "context": "GitPanel",
+    "bindings": {
+      "space G M": "git_panel::FocusEditor",
+      "space G S": "git::StageAll",
+      "space G C": "git::Commit",
+      "space G P": "git::Pull",
+      "space G U": "git::Push"
+    }
+  }
+]
