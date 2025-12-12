@@ -70,6 +70,8 @@
       "space G C": "git::Commit",
       "space G P": "git::Pull",
       "space G U": "git::Push"
+      "space G E": "git::GenerateCommitMessage",
+      "space G F": "git::Fetch"
     }
   }
 ]
