@@ -1,6 +1,6 @@
 theme = 3024 Night
-window-decoration = false
-font-size = 14
-font-family = "JetBrainsMono Nerd Font"
+window-decoration =  true
+font-size = 12
+font-family = "Monaspace Argon NF"
 background-opacity = 0.8
 background-blur-radius = 20
