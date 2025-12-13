@@ -51,6 +51,7 @@
 
       "space s v": "pane::SplitVertical",
       "space s h": "pane::SplitHorizontal",
+      "space s m": "workspace::ToggleZoom",
       "space x x": "editor::ToggleDiagnostics"
     }
   },
@@ -69,7 +70,7 @@
       "space G S": "git::StageAll",
       "space G C": "git::Commit",
       "space G P": "git::Pull",
-      "space G U": "git::Push"
+      "space G U": "git::Push",
       "space G E": "git::GenerateCommitMessage",
       "space G F": "git::Fetch"
     }
