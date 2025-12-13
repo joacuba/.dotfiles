@@ -1,6 +1,8 @@
 theme = 3024 Night
-window-decoration =  true
+window-decoration = false
 font-size = 12
 font-family = "Monaspace Argon NF"
 background-opacity = 0.8
 background-blur-radius = 20
+window-padding-x = 12
+window-padding-y = 12
