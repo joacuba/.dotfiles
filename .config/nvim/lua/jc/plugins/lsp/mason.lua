@@ -46,7 +46,7 @@ return {
 					-- 'gofmt' -- go formatter, already installed by go
 					"clang-format", -- C/C++ formatter
 					-- linters
-					"eslint_d",
+					"eslint-lsp",
 					"ruff", -- python rust base linter, before i was using pylint but i have venv problems
 					"golangci-lint",
 				},
