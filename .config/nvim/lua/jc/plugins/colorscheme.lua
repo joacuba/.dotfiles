@@ -1,13 +1,12 @@
---return {
---	"bluz71/vim-moonfly-colors",
---	name = "moonfly",
---	lazy = false,
---	priority = 1000,
---	config = function()
---		vim.cmd([[colorscheme moonfly]])
---	end,
---}
---
+return {
+	"bluz71/vim-moonfly-colors",
+	name = "moonfly",
+	lazy = false,
+	priority = 1000,
+	config = function()
+		vim.cmd([[colorscheme moonfly]])
+	end,
+}
 
 --return {
 --	"webhooked/kanso.nvim",
@@ -23,15 +22,15 @@
 --	end,
 --}
 
-return {
-	"rose-pine/neovim",
-	name = "rose-pine",
-	config = function()
-		require("rose-pine").setup({
-			styles = {
-				transparency = true,
-			},
-		})
-		vim.cmd("colorscheme rose-pine")
-	end,
-}
+--return {
+--	"rose-pine/neovim",
+--	name = "rose-pine",
+--	config = function()
+--		require("rose-pine").setup({
+--			styles = {
+--				transparency = true,
+--			},
+--		})
+--		vim.cmd("colorscheme rose-pine")
+--	end,
+--}
