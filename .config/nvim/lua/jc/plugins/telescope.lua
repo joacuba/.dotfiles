@@ -36,6 +36,7 @@ return {
 		vim.keymap.set("n", "<leader>fd", builtin.diagnostics, { desc = "Find Diagnostics" })
 		vim.keymap.set("n", "<leader>ft", function()
 			vim.cmd("TodoTelescope")
-		end, { desc = "Enable Copilot" })
+		end, { desc = "Find todos with telescope" })
+		vim.keymap.set("n", "<leader>fs", builtin.git_status, { desc = "Git: List current chanes per file" })
 	end,
 }

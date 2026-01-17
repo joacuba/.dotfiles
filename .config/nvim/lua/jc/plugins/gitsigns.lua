@@ -3,7 +3,7 @@ return {
 	event = { "BufReadPre", "BufNewFile" },
 	config = function()
 		local gitsigns = require("gitsigns")
-		gitsigns.setup({ word_diff = true })
+		gitsigns.setup({ word_diff = false })
 		vim.keymap.set("n", "<leader>hd", gitsigns.diffthis, { desc = "Show git diff" })
 	end,
 }
