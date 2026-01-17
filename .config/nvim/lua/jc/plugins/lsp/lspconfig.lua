@@ -48,7 +48,7 @@ return {
 		-- This setup add the fily type vue and the vue plugin to typescript language server
 		-- Reference 1: https://github.com/StevanFreeborn/nvim-config/blob/63bf20565b67d3a6c31839edf1ad2453ecd3bf84/lua/plugins/lsp.lua#L64-L80
 		-- Reference 2: https://github.com/vuejs/language-tools/wiki/Neovim
-		vim.lsp.config.ts_ls = {
+		vim.lsp.config("ts_ls", {
 			init_options = {
 				plugins = {
 					{
@@ -67,6 +67,6 @@ return {
 				"typescript.tsx",
 				"vue",
 			},
-		}
+		})
 	end,
 }

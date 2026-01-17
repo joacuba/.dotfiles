@@ -5,11 +5,11 @@ return {
 		local lint = require("lint")
 
 		lint.linters_by_ft = {
-			javascript = { "eslint" }, -- replace eslint_d with eslint because works with eslint-lsp that mason provides
-			typescript = { "eslint" },
-			javascriptreact = { "eslint" },
-			typescriptreact = { "eslint" },
-			astro = { "eslint" },
+			--javascript = { "eslint" }, -- replace eslint language server by eslint plugin no need to use this here
+			--typescript = { "eslint" },
+			--javascriptreact = { "eslint" },
+			--typescriptreact = { "eslint" },
+			--astro = { "eslint" },
 			python = { "ruff" },
 			cpp = { "clangtidy" }, -- not available in Mason, install llvm for use clang-tidy
 			h = { "clangtidy" }, -- not available in Mason, install llvm for use clang-tidy
