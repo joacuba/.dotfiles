@@ -1,12 +1,23 @@
 return {
-	"bluz71/vim-moonfly-colors",
-	name = "moonfly",
+	"metalelf0/black-metal-theme-neovim",
 	lazy = false,
 	priority = 1000,
 	config = function()
-		vim.cmd([[colorscheme moonfly]])
+		require("black-metal").setup({
+			-- optional configuration here
+		})
+		require("black-metal").load()
 	end,
 }
+--return {
+--	"bluz71/vim-moonfly-colors",
+--	name = "moonfly",
+--	lazy = false,
+--	priority = 1000,
+--	config = function()
+--		vim.cmd([[colorscheme moonfly]])
+--	end,
+--}
 
 --return {
 --	"webhooked/kanso.nvim",
