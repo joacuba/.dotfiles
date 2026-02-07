@@ -1,3 +1,4 @@
+-- plugin for inline autocomplete AI
 return {
 	"Exafunction/windsurf.nvim",
 	dependencies = {

@@ -20,5 +20,6 @@ require("lazy").setup({
 	spec = {
 		{ import = "jc.plugins" },
 		{ import = "jc.plugins.lsp" },
+		{ import = "jc.plugins.ai" },
 	},
 })
