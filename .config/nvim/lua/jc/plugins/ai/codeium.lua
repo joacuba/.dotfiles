@@ -1,6 +1,9 @@
 -- plugin for inline autocomplete AI
 return {
 	"Exafunction/windsurf.nvim",
+	keys = {
+		{ "<leader>ct", "<cmd>Codeium Toggle<CR>", desc = "Codeium toggle" },
+	},
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"hrsh7th/nvim-cmp",
@@ -47,9 +50,5 @@ return {
 				},
 			},
 		})
-
-		vim.keymap.set("n", "<leader>ct", function()
-			vim.cmd("Codeium toggle")
-		end, { desc = "Codeium toggle" })
 	end,
 }
