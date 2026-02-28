@@ -1,14 +1,27 @@
 return {
-	"metalelf0/black-metal-theme-neovim",
-	lazy = false,
+	"aktersnurra/no-clown-fiesta.nvim",
 	priority = 1000,
 	config = function()
-		require("black-metal").setup({
-			-- optional configuration here
+		require("no-clown-fiesta").setup({
+			theme = "dark", -- supported themes are: dark, dim, light
 		})
-		require("black-metal").load()
+		vim.cmd([[colorscheme no-clown-fiesta]])
 	end,
+	lazy = false,
 }
+--return {
+--	"metalelf0/black-metal-theme-neovim",
+--	lazy = false,
+--	priority = 1000,
+--	config = function()
+--		require("black-metal").setup({
+--			-- optional configuration here
+--			theme = "immortal",
+--			variant = "light",
+--		})
+--		require("black-metal").load()
+--	end,
+--}
 --return {
 --	"bluz71/vim-moonfly-colors",
 --	name = "moonfly",
