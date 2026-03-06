@@ -4,6 +4,7 @@ return {
 	config = function()
 		require("no-clown-fiesta").setup({
 			theme = "dark", -- supported themes are: dark, dim, light
+			transparent = true,
 		})
 		vim.cmd([[colorscheme no-clown-fiesta]])
 	end,

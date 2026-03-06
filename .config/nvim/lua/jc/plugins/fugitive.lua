@@ -20,5 +20,13 @@ return {
 		vim.keymap.set("n", "<leader>go", function()
 			vim.cmd("Git")
 		end, { desc = "Open fugitive (git)" })
+
+		vim.keymap.set("n", "<leader>glo", function()
+			vim.cmd("Git log")
+		end, { desc = "git log" })
+
+		vim.keymap.set("n", "<leader>glg", function()
+			vim.cmd("Git log --all --decorate --graph --oneline")
+		end, { desc = "git log graph" })
 	end,
 }
