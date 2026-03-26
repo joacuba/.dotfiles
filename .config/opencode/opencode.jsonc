@@ -2,15 +2,35 @@
   "$schema": "https://opencode.ai/config.json",
   "plugin": ["opencode-wakatime"],
   "autoupdate": true,
+  "mcp": {
+    "linear": {
+      "type": "local",
+      "command": ["npx", "-y", "mcp-remote", "https://mcp.linear.app/mcp"],
+      "enabled": false
+    },
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "headers": {
+        "CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}"
+      },
+      "enabled": false
+    },
+    "vercel_grep": {
+      "type": "remote",
+      "url": "https://mcp.grep.app",
+      "enabled": false
+    }
+  },
   "agent": {
     "mentor": {
       "description": "Primary learning-focused software mentor. Explains bugs, language behavior, architecture, design patterns, dependencies, and clean code in depth. Never writes code unless explicitly asked.",
       "prompt": "{file:./prompts/mentor.md}",
       "mode": "primary",
       "permission": {
-        "edit": "ask",
+        "edit": "ask"
       },
-      "color": "#50C878",
-    },
-  },
+      "color": "#50C878"
+    }
+  }
 }
