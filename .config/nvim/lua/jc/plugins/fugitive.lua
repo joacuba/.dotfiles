@@ -17,7 +17,7 @@ return {
 			vim.cmd("Git diff")
 		end, { desc = "git diff" })
 
-		vim.keymap.set("n", "<leader>go", function()
+		vim.keymap.set("n", "<leader>og", function()
 			vim.cmd("Git")
 		end, { desc = "Open fugitive (git)" })
 
