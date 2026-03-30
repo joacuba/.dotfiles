@@ -1,6 +1,8 @@
-return {
-	"esmuellert/nvim-eslint",
-	config = function()
-		require("nvim-eslint").setup({})
-	end,
-}
+local utils = require("jc.plugins.utils")
+
+vim.pack.add({
+  utils.gh('esmuellert/nvim-eslint'),
+})
+
+-- Initialize eslint
+require('nvim-eslint').setup({})

@@ -1,2 +1,2 @@
-require "jc.core"
-require "jc.lazy"
+require "jc.config"
+require "jc.plugins"

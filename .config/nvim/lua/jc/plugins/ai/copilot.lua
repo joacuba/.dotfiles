@@ -1,17 +1,5 @@
-return {
-	"github/copilot.vim",
-	cmd = "Copilot",
-	config = function()
-		vim.keymap.set("n", "<leader>ce", function()
-			vim.cmd("Copilot enable")
-		end, { desc = "Enable Copilot" })
+local utils = require("jc.plugins.utils")
 
-		vim.keymap.set("n", "<leader>cd", function()
-			vim.cmd("Copilot disable")
-		end, { desc = "Disable Copilot" })
-
-		vim.keymap.set("n", "<leader>cs", function()
-			vim.cmd("Copilot status")
-		end, { desc = "Copilot Status" })
-	end,
-}
+vim.pack.add({
+  utils.gh('github/copilot.vim')
+})

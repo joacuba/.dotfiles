@@ -1,5 +1,4 @@
-vim.cmd("let g:netrw_liststyle = 3")
-
+vim.g.netrw_liststyle = 3
 local opt = vim.opt --short vim.opt
 
 opt.relativenumber = true
@@ -25,12 +24,9 @@ opt.signcolumn = "yes" -- always show the sign column
 -- backspace
 opt.backspace = "indent,eol,start"
 
--- clipbaord
+-- clipboard
 opt.clipboard:append("unnamedplus") -- use the system clipbard for default register
 
 -- slipt windows
 opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
-
--- moonflyTransparent options for moonfly Theme for neovim
-vim.g.moonflyTransparent = true

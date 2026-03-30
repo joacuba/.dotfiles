@@ -1,4 +1,24 @@
-return {
-    "nvim-lua/plenary.nvim", -- lua functions that many plugins use
-    "christoomey/vim-tmux-navigator", -- tmux & split windows navigation
-}
+require("jc.plugins.oil")
+require("jc.plugins.dependencies")
+require("jc.plugins.treesitter")
+require("jc.plugins.telescope")
+require("jc.plugins.tmux-navigator")
+require("jc.plugins.vim-maximizer")
+require("jc.plugins.colorscheme")
+require("jc.plugins.lsp")
+require("jc.plugins.nvim-cmp")
+require("jc.plugins.nvim-autopairs")
+require("jc.plugins.slimline")
+require("jc.plugins.gitsigns")
+require("jc.plugins.which-key")
+require("jc.plugins.alpha-nvim")
+require("jc.plugins.nvim-tree")
+require("jc.plugins.ai")
+require("jc.plugins.vim-fugitive")
+require("jc.plugins.indent-code")
+require("jc.plugins.formatter")
+require("jc.plugins.smear-cursor")
+require("jc.plugins.harpoon")
+require("jc.plugins.undotree")
+require("jc.plugins.todo")
+require("jc.plugins.trouble")

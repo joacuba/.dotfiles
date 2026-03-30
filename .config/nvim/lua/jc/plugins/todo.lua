@@ -1,5 +1,7 @@
-return {
-	"folke/todo-comments.nvim",
-	dependencies = { "nvim-lua/plenary.nvim" },
-	opts = {},
-}
+local utils = require("jc.plugins.utils")
+
+vim.pack.add({
+	utils.gh("folke/todo-comments.nvim"),
+})
+
+require("todo-comments").setup({})
