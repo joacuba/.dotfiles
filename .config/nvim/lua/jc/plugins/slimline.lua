@@ -2,7 +2,6 @@ local utils = require("jc.plugins.utils")
 
 vim.pack.add({
 	utils.gh("sschleemilch/slimline.nvim"),
-	utils.gh("sschleemilch/slimline.nvim"),
 })
 
 require("slimline").setup({

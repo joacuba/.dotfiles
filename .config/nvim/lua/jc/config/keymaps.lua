@@ -2,6 +2,8 @@ vim.g.mapleader = " "
 
 vim.keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 
+vim.keymap.set("n", "<leader>qb", ":q<CR>", { desc = "Close - quit buffer" })
+
 vim.keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "No Highlight" })
 
 -- window management

@@ -63,6 +63,7 @@ require("snacks").setup({
 			},
 		},
 	},
+	-- Smooth scrolling for Neovim. Properly handles scrolloff and mouse scrolling.
 	scroll = {
 		enabled = true, -- Enable the scroll component.
 	},

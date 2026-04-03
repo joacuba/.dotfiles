@@ -32,6 +32,7 @@ treesitter
 		"json",
 		"java",
 		"javascript",
+		"latex",
 		"lua",
 		"markdown",
 		"markdown_inline",

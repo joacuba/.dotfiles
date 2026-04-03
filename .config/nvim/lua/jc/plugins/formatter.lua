@@ -1,41 +1,41 @@
 local utils = require("jc.plugins.utils")
 
 vim.pack.add({
-  utils.gh("stevearc/conform.nvim")
+	utils.gh("stevearc/conform.nvim"),
 })
 
 local conform = require("conform")
 
 conform.setup({
-  formatters_by_ft = {
-    javascript = { "prettier" },
-    typescript = { "prettier" },
-    javascriptreact = { "prettier" },
-    typescriptreact = { "prettier" },
-    astro = { "prettier" },
-    css = { "prettier" },
-    html = { "prettier" },
-    json = { "prettier" },
-    yaml = { "prettier" },
-    markdown = { "prettier" },
-    graphql = { "prettier" },
-    lua = { "stylua" },
-    python = { "isort", "black" },
-    cpp = { "clang-format" },
-    go = { "gofmt" },
-    rust = { "rustfmt", lsp_format = "fallback" }, -- rust formater installed automatically when installed rustup tools. And also setting LSP as fallback for formating
-  },
-  format_on_save = {
-    lsp_fallback = true,
-    async = false,
-    timeout_ms = 1000,
-  },
+	formatters_by_ft = {
+		javascript = { "prettier" },
+		typescript = { "prettier" },
+		javascriptreact = { "prettier" },
+		typescriptreact = { "prettier" },
+		astro = { "prettier" },
+		css = { "prettier" },
+		html = { "prettier" },
+		json = { "prettier" },
+		yaml = { "prettier" },
+		markdown = { "prettier" },
+		graphql = { "prettier" },
+		lua = { "stylua" },
+		python = { "isort", "black" },
+		cpp = { "clang-format" },
+		go = { "gofmt" },
+		rust = { "rustfmt", lsp_format = "fallback" }, -- rust formater installed automatically when installed rustup tools. And also setting LSP as fallback for formating
+	},
+	format_on_save = {
+		lsp_fallback = true,
+		async = false,
+		timeout_ms = 1000,
+	},
 })
 
 vim.keymap.set({ "n", "v" }, "<leader>mp", function()
-  conform.format({
-    lsp_fallback = true,
-    async = false,
-    timeout_ms = 1000,
-  })
+	conform.format({
+		lsp_fallback = true,
+		async = false,
+		timeout_ms = 1000,
+	})
 end, { desc = "Format file or range (in visual mode)" })
