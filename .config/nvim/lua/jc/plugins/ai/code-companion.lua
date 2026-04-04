@@ -6,6 +6,7 @@ vim.pack.add({
 		version = vim.version.range("^19.0.0"),
 	},
 	-- dependencies
+	-- more about this plugins: https://github.com/olimorris/codecompanion.nvim/discussions/640#discussioncomment-13683183
 	utils.gh("franco-ruggeri/codecompanion-spinner.nvim"),
 	-- TODO: investigate about adding this dependency to codecompanion
 	-- utils.gh("ravitemer/codecompanion-history.nvim")
@@ -50,6 +51,8 @@ require("codecompanion").setup({
 				-- only display the adapters defined in this config
 				show_presets = false,
 			},
+
+			-- refence for this adapter: https://github.com/olimorris/codecompanion.nvim/discussions/2810#discussioncomment-15946543
 			nvidia_nim = function()
 				-- 	return require("codecompanion.adapters.http").extend("openai", {
 				-- 		name = "nvidia_nim",
@@ -147,6 +150,7 @@ require("codecompanion").setup({
 							choices = {
 								["moonshotai/kimi-k2.5"] = { opts = { can_reason = true, has_vision = true } },
 								["z-ai/glm5"] = { opts = { can_reason = true } },
+								["google/gemma-4-31b-it"] = { opts = { can_reason = true, has_vision = true } },
 							},
 						},
 						max_tokens = {
