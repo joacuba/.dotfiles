@@ -16,7 +16,8 @@ local actions = require("telescope.actions")
 
 require("telescope").setup({
 	defaults = {
-		path_display = { "smart" },
+		-- see :h telescope.defaults.path_display
+		path_display = { "absolute" },
 		mappings = {
 			i = {
 				["<C-p>"] = actions.move_selection_previous, -- move to the prev result
