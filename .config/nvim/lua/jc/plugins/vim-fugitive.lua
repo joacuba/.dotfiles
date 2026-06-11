@@ -18,8 +18,8 @@ vim.keymap.set("n", "<leader>gc", function()
 end, { desc = "git commit" })
 
 vim.keymap.set("n", "<leader>gd", function()
-	vim.cmd("Git diff")
-end, { desc = "git diff" })
+	vim.cmd("Git diff %")
+end, { desc = "git diff current file" })
 
 vim.keymap.set("n", "<leader>og", function()
 	vim.cmd("Git")

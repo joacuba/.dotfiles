@@ -67,4 +67,8 @@ require("snacks").setup({
 	scroll = {
 		enabled = true, -- Enable the scroll component.
 	},
+	indent = {
+		enabled = true, -- Enable the indent component.
+		char = "│",
+	},
 })

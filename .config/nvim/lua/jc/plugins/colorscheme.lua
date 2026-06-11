@@ -8,7 +8,17 @@ vim.pack.add({
 })
 
 require("rose-pine").setup({
-	variant = "pine",
+	dark_variant = "moon",
+	palette = {
+		moon = {
+			base = "#1A1A1A",
+			surface = "#1A1A1A",
+		},
+		dawn = {
+			base = "#FFFFFF",
+			surface = "#FFFFFF",
+		},
+	},
 })
 
 vim.cmd("colorscheme rose-pine")
