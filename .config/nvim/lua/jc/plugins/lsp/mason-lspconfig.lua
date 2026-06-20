@@ -66,5 +66,7 @@ require("mason-tool-installer").setup({
 		--"eslint-lsp", -- replace by eslint plugin
 		"ruff", -- python rust base linter, before i was using pylint but i have venv problems
 		"golangci-lint",
+		"oxlint",
+		"oxfmt",
 	},
 })
