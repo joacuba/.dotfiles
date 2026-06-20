@@ -21,10 +21,6 @@ dashboard.section.buttons.val = {
 	dashboard.button("SPC fg", "  > Find Word", "<cmd>Telescope live_grep<CR>"),
 	dashboard.button("q", "󰅚  Quit NVIM", ":qa<CR>"),
 }
-local handle = io.popen("fortune")
-local fortune = handle:read("*a")
-handle:close()
-dashboard.section.footer.val = fortune
 
 dashboard.config.opts.noautocmd = true
 
