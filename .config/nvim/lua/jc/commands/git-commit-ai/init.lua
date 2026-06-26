@@ -4,7 +4,7 @@ local cmd = {
 	"opencode",
 	"--model",
 	"opencode/big-pickle",
-	"--pure",
+	"--pure", --pure cmd is for run opencode without plugins
 }
 
 local prompt_cmd = "run"
