@@ -54,15 +54,14 @@ local function get_repo_root()
 	return vim.trim(systemCompletedObj.stdout or "")
 end
 
--- Get the staged files and their diff
+-- Get the file changes in the staged area (index) of the git repository
 -- @param cwd The current working directory (repository root)
 local function get_staged_files(cwd)
 	local systemCompletedObj = sys({
 		"git",
 		"diff",
 		"--cached",
-		"--",
-		".",
+		"--shortstat",
 	}, { cwd = cwd, text = true })()
 	if systemCompletedObj.code ~= 0 then
 		return nil, "Failed to get staged files"
@@ -72,7 +71,7 @@ end
 
 -- Build the prompt for the AI model based on the staged diff
 -- @param diff The diff of the staged files
-local function build_prompt(diff)
+local function build_prompt()
 	return table.concat({
 		"You are generating a git commit message.",
 		"",
@@ -80,23 +79,19 @@ local function build_prompt(diff)
 		"Do not use markdown fences.",
 		"Use Conventional Commits format.",
 		"Write a rich body explaining what changed and why.",
+		"Use git for see the changes and the context of the changes.",
 		"Keep the subject line under 72 characters if possible.",
-		"Do not include agent co-authors in the commit message.",
 		"",
 		"Format:",
 		"<type>(optional-scope): <subject>",
 		"",
 		"<body>",
-		"",
-		"Use the staged diff below:",
-		"",
-		diff,
 	}, "\n")
 end
 
 -- Run the agent CLI with the given prompt and return the generated commit message
-local function run_agen_cli(cmd, cwd, prompt)
-	local fullcmd = vim.list_extend(vim.deepcopy(cmd), { "--prompt", prompt })
+local function run_agen_cli(cmd, cwd, prompt_cmd, prompt)
+	local fullcmd = vim.list_extend(vim.deepcopy(cmd), { prompt_cmd, prompt })
 	local systemCompletedObj = sys(fullcmd, { cwd = cwd, text = true })()
 	if systemCompletedObj.code ~= 0 then
 		return nil, "Failed to run" .. cmd[1] .. "agent cli: " .. (systemCompletedObj.stderr or "unknown error")
@@ -121,7 +116,7 @@ end
 
 -- The main function to generate a commit message and insert it into the current buffer
 -- @param cmd The command to run the AI agent CLI (e.g., {"codex", "exec"})
-function M.generate_commit_message(cmd)
+function M.generate_commit_message(prompt_cmd, cmd)
 	local bufnr = vim.api.nvim_get_current_buf()
 
 	notify("Generating commit message...")
@@ -148,10 +143,10 @@ function M.generate_commit_message(cmd)
 			return
 		end
 
-		local prompt = build_prompt(staged_diff)
+		local prompt = build_prompt()
 
 		local commit_message
-		commit_message, err = run_agen_cli(cmd, repo_root, prompt)
+		commit_message, err = run_agen_cli(cmd, repo_root, prompt_cmd, prompt)
 		if not commit_message then
 			notify(err, vim.log.levels.ERROR)
 			return

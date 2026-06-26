@@ -1,19 +1,16 @@
 local git_commit_ai = require("jc.commands.git-commit-ai.core")
 
 local cmd = {
-	"copilot",
+	"opencode",
 	"--model",
-	"gpt-5-mini",
-	"--deny-tool",
-	"read",
-	"--deny-tool",
-	"shell",
-	"--deny-tool",
-	"write",
+	"opencode/big-pickle",
+	"--pure",
 }
 
+local prompt_cmd = "run"
+
 vim.api.nvim_create_user_command("GitCommitAI", function()
-	git_commit_ai.generate_commit_message(cmd)
+	git_commit_ai.generate_commit_message(prompt_cmd, cmd)
 end, { desc = "Generate a git commit message using AI based on the staged changes" })
 
 vim.api.nvim_create_autocmd("FileType", {
