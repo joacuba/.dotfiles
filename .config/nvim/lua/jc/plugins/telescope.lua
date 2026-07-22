@@ -28,6 +28,14 @@ require("telescope").setup({
 		-- for layout docs see :help telescope.layout
 		layout_strategy = "vertical",
 		layout_config = { height = 0.95 },
+		file_ignore_patterns = {
+			"^.git/",
+		},
+	},
+	pickers = {
+		find_files = {
+			hidden = true,
+		},
 	},
 })
 
