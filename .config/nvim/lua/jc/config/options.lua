@@ -30,25 +30,4 @@ opt.clipboard:append("unnamedplus") -- use the system clipbard for default regis
 opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 
--- background color
-local function update_background()
-	local handle = io.popen("defaults read -g AppleInterfaceStyle 2>/dev/null")
-
-	local result = handle:read("*a")
-	handle:close()
-
-	if result:match("Dark") then
-		vim.opt.background = "dark"
-	else
-		vim.opt.background = "light"
-	end
-end
-
-update_background()
-
-local timer = vim.uv.new_timer()
-timer:start(
-	0, -- initial delay
-	5000, -- check every 5 seconds
-	vim.schedule_wrap(update_background)
-)
+opt.autoread = true -- automatically read file when changed outside of vim

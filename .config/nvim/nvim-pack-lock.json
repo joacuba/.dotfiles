@@ -46,6 +46,10 @@
       "rev": "a12fd5672110c8aa7e3c8419e28c96943ca179be",
       "src": "https://github.com/github/copilot.vim"
     },
+    "cursor-theme": {
+      "rev": "1173d11a77323adf3fd6d38c658bf58dc00301ac",
+      "src": "https://github.com/duarteocarmo/cursor-themes"
+    },
     "gitsigns.nvim": {
       "rev": "50c205548d8b037b7ff6378fca6d21146f0b6161",
       "src": "https://github.com/lewis6991/gitsigns.nvim"
@@ -124,10 +128,6 @@
     "render-markdown.nvim": {
       "rev": "c7188a8f9d2953696b6303caccbf39c51fa2c1b1",
       "src": "https://github.com/MeanderingProgrammer/render-markdown.nvim"
-    },
-    "rose-pine": {
-      "rev": "cf2a288696b03d0934da713d66c6d71557b5c997",
-      "src": "https://github.com/rose-pine/neovim"
     },
     "slimline.nvim": {
       "rev": "2ca5a979698fd0af0406770fa5dc81899fb53106",

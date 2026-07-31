@@ -69,6 +69,6 @@ require("snacks").setup({
 	},
 	indent = {
 		enabled = true, -- Enable the indent component.
-		char = "│",
+		char = "",
 	},
 })

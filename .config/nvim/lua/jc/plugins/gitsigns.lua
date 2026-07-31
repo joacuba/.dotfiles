@@ -11,4 +11,4 @@ gitsigns.setup({
 })
 
 -- keymaps
-vim.keymap.set("n", "<leader>hd", gitsigns.diffthis, { desc = "Show git diff" })
+vim.keymap.set("n", "<leader>hd", gitsigns.diffthis, { desc = "Show git diff" }) -- hd is alias for "highlight diff"
