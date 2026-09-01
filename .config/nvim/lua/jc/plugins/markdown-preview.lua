@@ -12,13 +12,6 @@ vim.api.nvim_create_autocmd("PackChanged", { callback = build_hook })
 
 vim.pack.add({
 	utils.gh("iamcco/markdown-preview.nvim"),
-}, { load = false })
-
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "markdown",
-	callback = function()
-		vim.cmd.packadd("markdown-preview.nvim")
-	end,
 })
 
 vim.keymap.set("n", "<leader>mt", ":MarkdownPreviewToggle<CR>", { desc = "Toggle markdown preview" })
